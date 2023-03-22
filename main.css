@@ -1,0 +1,61 @@
+.sky{
+    background-image: url(./images/sky.jpg);
+    background-size: 100%;
+}
+.radius{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 2px solid rgb(144, 144, 144);
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    transform: rotateX(70deg) rotateY(0deg) rotateX(0deg);
+}
+.earth{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotateZ(0deg) rotateY(180deg) rotateX(90deg);
+}
+.earth img{
+    width: 300px;
+    height: 300px;
+}
+.moon{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotateZ(0deg) translate(175px) rotateY(90deg) rotateX(90deg);
+    animation-name: orbita;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+.moon img{
+    width: 50px;
+    height: 50px;
+}
+@keyframes orbita {
+    0%{
+        transform: rotateZ(0deg) translate(175px) rotateY(90deg) rotateX(90deg);
+    }
+    100%{
+        transform: rotateZ(360deg) translate(175px) rotateY(90deg) rotateX(450deg);
+    }
+}
